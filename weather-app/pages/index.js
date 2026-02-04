@@ -4,7 +4,7 @@ import { MainCard } from "../components/MainCard";
 import { ContentBox } from "../components/ContentBox";
 import { Header } from "../components/Header";
 import { DateAndTime } from "../components/DateAndTime";
-import { Search } from "../components/Search";
+// import { Search } from "../components/Search";
 import { MetricsBox } from "../components/MetricsBox";
 import { LoadingScreen } from "../components/LoadingScreen";
 import { ErrorScreen } from "../components/ErrorScreen";
@@ -30,7 +30,6 @@ export const App = () => {
     getData();
   }, [triggerFetch]);
 
-  console.log(weatherData?.geodata.results[0].name);
   return weatherData && !weatherData.error ? (
     <div className={styles.wrapper}>
       <MainCard
@@ -42,7 +41,7 @@ export const App = () => {
       <ContentBox>
         <Header>
           <DateAndTime weatherData={weatherData} />
-          <Search
+          {/* <Search
             placeHolder="Search a city..."
             value={cityInput}
             onFocus={(e) => {
@@ -54,7 +53,7 @@ export const App = () => {
               e.keyCode === 13 && setTriggerFetch(!triggerFetch);
               e.target.placeholder = "Search a city...";
             }}
-          />
+          /> */}
         </Header>
         <MetricsBox
           weatherData={weatherData.weather.current_weather}

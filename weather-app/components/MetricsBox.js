@@ -34,7 +34,6 @@ export const MetricsBox = ({ weatherData, unitSystem }) => {
         title={"Visibility"}
         iconSrc={"/icons/binocular.png"}
         metric={weatherData.is_day ? "jour" : "nuit"}
-        unit={unitSystem == "metric" ? "km" : "miles"}
       />
       {/* <MetricsCard
         title={"Sunrise"}
